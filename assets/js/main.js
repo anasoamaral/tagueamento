@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
 (function($) {
 
 	var	$window = $(window),
