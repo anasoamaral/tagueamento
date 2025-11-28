@@ -4,6 +4,17 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+window.dataLayer = window.dataLayer || [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  dataLayer.push({
+    event: "page_view",
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+    page_title: document.title
+  });
+});
+
 (function($) {
 
 	var	$window = $(window),
