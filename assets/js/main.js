@@ -146,6 +146,10 @@ document.addEventListener("DOMContentLoaded", function () {
         social_network: socialNetwork,   // ex: "Twitter"
         social_href: href,               // ex: "https://twitter.com/... "
         social_id: link.id || null       // se quiser dar IDs específicos depois
+      });
+    });
+  });
+});
 
 
 
