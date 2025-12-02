@@ -114,8 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("[FORM] submitted");
     
-    // aqui você pode evitar envio real se estiver testando
-    // event.preventDefault();
   });
 
 });
