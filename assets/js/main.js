@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       }, {
-        threshold: 0.3 // 30% visível
+        threshold: 0.8 // 30% visível
       });
 
       observer.observe(elemento);
