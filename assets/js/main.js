@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const botao = document.querySelector("#comece-agora");
+  const botao = document.querySelector("#veja-mais");
 
   if (!botao) return;
 
