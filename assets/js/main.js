@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!botao) return;
 
   botao.addEventListener("click", function () {
-    console.log("Clique no botão #comece-agora");
+    console.log("Clique no botão #veja-mais");
 
     dataLayer.push({
       event: "button_click",
