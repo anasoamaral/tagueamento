@@ -75,6 +75,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  const campos = document.querySelectorAll("form input, form textarea");
+
+  campos.forEach(campo => {
+    campo.addEventListener("change", () => {
+      dataLayer.push({
+        event: "form_field_change",
+        field_id: campo.id || null,
+        field_name: campo.name || null,
+        field_value: campo.value || null
+      });
+
+      console.log("[FORM] change →", campo.id, campo.value);
+    });
+  });
+
+});
+
+
+
 
 (function($) {
 
