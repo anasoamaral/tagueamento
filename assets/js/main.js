@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         threshold: 0.3 // 30% visível
       });
 
-      observer.observe(elemento);
+      //observer.observe(elemento);
     });
 
 
