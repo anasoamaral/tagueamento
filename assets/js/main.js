@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
   const botao = document.querySelector("#comece-agora");
 
   if (!botao) return;
