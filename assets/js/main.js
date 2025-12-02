@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
               element_id: "cachorro-feliz",
               element_name: "Cachorrinho feliz"
             });
-            observer.disconnect();
+        // observer.disconnect();
           }
         });
       }, {
