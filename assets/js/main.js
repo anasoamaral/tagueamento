@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Elemento visível! Disparando dataLayer...");
             dataLayer.push({
               event: "element_visible",
-              element_id: "meu-elemento",
-              element_name: "Bloco Rosa Teste"
+              element_id: "cachorro-feliz",
+              element_name: "Cachorrinho feliz"
             });
             observer.disconnect();
           }
