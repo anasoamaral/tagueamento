@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-      const elemento = document.querySelector("#meu-elemento");
+      const elemento = document.querySelector("#imagem-visivel");
       if (!elemento) {
         console.log("Elemento não encontrado");
         return;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-	
+
 
 (function($) {
 
