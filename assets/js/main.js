@@ -16,6 +16,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const elemento = document.querySelector("#meu-elemento");
+
+  // se o elemento não existir, não faz nada
+  if (!elemento) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        // dispara apenas na primeira vez que aparecer
+        dataLayer.push({
+          event: "element_visible",
+          element_id: "meu-elemento",
+          element_name: "Banner Principal",
+        });
+
+        // para não disparar mais vezes
+        observer.disconnect();
+      }
+    });
+  }, {
+    threshold: 0.5 // 50% visível na tela
+  });
+
+  observer.observe(elemento);
+});
+
 
 (function($) {
 
