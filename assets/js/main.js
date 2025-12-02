@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dataLayer.push({
       event: "button_click",
-      element_id: "veja-agora",
-      element_name: "Get Started"
+      element_id: "veja-mais",
+      element_name: "Learn More"
     });
   });
 });
