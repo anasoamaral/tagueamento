@@ -15,34 +15,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const elemento = document.querySelector("#imagem-visivel");
-
-  // se o elemento não existir, não faz nada
-  if (!elemento) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-
-        // dispara apenas na primeira vez que aparecer
-        dataLayer.push({
-          event: "element_visible",
-          element_id: "meu-elemento",
-          element_name: "Banner Principal",
-        });
-
-        // para não disparar mais vezes
-        observer.disconnect();
+document.addEventListener("DOMContentLoaded", function () {
+      const elemento = document.querySelector("#meu-elemento");
+      if (!elemento) {
+        console.log("Elemento não encontrado");
+        return;
       }
-    });
-  }, {
-    threshold: 0.5 // 50% visível na tela
-  });
 
-  observer.observe(elemento);
-});
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          console.log("Intersection entry:", entry);
+          if (entry.isIntersecting) {
+            console.log("Elemento visível! Disparando dataLayer...");
+            dataLayer.push({
+              event: "element_visible",
+              element_id: "meu-elemento",
+              element_name: "Bloco Rosa Teste"
+            });
+            observer.disconnect();
+          }
+        });
+      }, {
+        threshold: 0.3 // 30% visível
+      });
+
+      observer.observe(elemento);
+    });
 
 
 (function($) {
