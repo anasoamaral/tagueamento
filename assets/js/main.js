@@ -58,7 +58,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+  const botao = document.querySelector("#comece-agora");
 
+  if (!botao) return;
+
+  botao.addEventListener("click", function () {
+    console.log("Clique no botão #comece-agora");
+
+    dataLayer.push({
+      event: "button_click",
+      element_id: "comece-agora",
+      element_name: "Get Started"
+    });
+  });
+});
 
 
 
