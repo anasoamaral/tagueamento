@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const elemento = document.querySelector("#meu-elemento");
+  const elemento = document.querySelector("#imagem-visivel");
 
   // se o elemento não existir, não faz nada
   if (!elemento) return;
