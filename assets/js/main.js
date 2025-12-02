@@ -120,6 +120,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona todos os links de redes sociais no footer
+  const socialLinks = document.querySelectorAll("ul.icons a");
+
+  if (!socialLinks.length) {
+    console.log("[SOCIAL] Nenhum link de rede social encontrado.");
+    return;
+  }
+
+  socialLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      // Pega o nome da rede pelo span.label (Twitter, Instagram, etc.)
+      const labelEl = link.querySelector(".label");
+      const socialNetwork = labelEl ? labelEl.textContent.trim() : null;
+
+      // URL real do link
+      const href = link.getAttribute("href");
+
+      console.log("[SOCIAL] Clique em rede social:", socialNetwork, href);
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "social_click",
+        social_network: socialNetwork,   // ex: "Twitter"
+        social_href: href,               // ex: "https://twitter.com/... "
+        social_id: link.id || null       // se quiser dar IDs específicos depois
+
+
 
 (function($) {
 
