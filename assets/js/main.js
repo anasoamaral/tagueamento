@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
+//coloque seu dataLayer aqui acima
 
 (function($) {
 
