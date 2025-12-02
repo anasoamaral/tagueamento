@@ -94,6 +94,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.querySelector("form");
+
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+
+    dataLayer.push({
+      event: "form_submitted",
+      form_id: "contato",
+      form_name: "Fale Conosco",
+      name: form.querySelector("#name")?.value || null,
+      email: form.querySelector("#email")?.value || null,
+      message: form.querySelector("#message")?.value || null
+    });
+
+    console.log("[FORM] submitted");
+    
+    // aqui você pode evitar envio real se estiver testando
+    // event.preventDefault();
+  });
+
+});
 
 
 
