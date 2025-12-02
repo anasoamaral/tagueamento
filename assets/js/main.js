@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dataLayer.push({
       event: "button_click",
-      element_id: "comece-agora",
+      element_id: "veja-agora",
       element_name: "Get Started"
     });
   });
