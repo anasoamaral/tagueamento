@@ -3307,7 +3307,7 @@ input, select, textarea {
 			}
 
 				#wrapper > section > header h1:before, #wrapper > section > header h2:before {
-					background: #eb84bc;
+					background: #f57ca3;
 					content: '';
 					display: block;
 					height: 2px;
