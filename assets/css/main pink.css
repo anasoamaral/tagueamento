@@ -2252,15 +2252,15 @@ input, select, textarea {
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
 			content: '\f00c';
-			background-color: #eb84bc;
-			border-color: #eb84bc;
+			background-color: #f57ca3;
+			border-color: #f57ca3;
 			color: #ffffff;
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #eb84bc;
-			box-shadow: 0 0 0 1px #eb84bc;
+			border-color: #f57ca3;
+			box-shadow: 0 0 0 1px #f57ca3;
 		}
 
 	input[type="checkbox"] + label:before {
