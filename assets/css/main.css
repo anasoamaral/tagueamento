@@ -2104,6 +2104,7 @@ input, select, textarea {
 	input[type="search"],
 	input[type="url"],
 	select,
+	select[value="assunto"]
 	textarea,  {
 		-moz-appearance: none;
 		-webkit-appearance: none;
