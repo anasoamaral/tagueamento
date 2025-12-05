@@ -3373,7 +3373,7 @@ input, select, textarea {
 			}
 
 			#wrapper > section:last-of-type > header:after {
-				background: #43d9b8;
+				background: #eb84bc;
 				border-radius: 0.5rem;
 				bottom: -1.5rem;
 				content: '';
