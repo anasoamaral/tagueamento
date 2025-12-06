@@ -150,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const botaoEnviar = document.querySelector('input[type="submit"]');
