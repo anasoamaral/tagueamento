@@ -3375,11 +3375,11 @@ input, select, textarea {
 				height: 100%;
 			}
 
-			cachorro-gato {
+			.cachorro-gato {
 				display: flex;
 			}
 
-			botoes-intro {
+			.botoes-intro {
 				justify-content: center;
 				align-items: center;
 			}
