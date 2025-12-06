@@ -150,6 +150,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  const botaoEnviar = document.querySelector('input[type="submit"]');
+  const modal = document.querySelector("#modal-formulario");
+  const fechar = document.querySelector("#fechar-modal");
+
+  if (!form || !botaoEnviar || !modal) return;
+
+  botaoEnviar.addEventListener("click", function (event) {
+    event.preventDefault(); // impede o envio imediato
+
+    // Se quiser taguear aqui:
+    dataLayer.push({
+      event: "form_submit_click",
+      form_id: "contato"
+    });
+
+    modal.style.display = "flex"; // mostra modal
+  });
+
+  fechar.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Fecha ao clicar fora da caixa
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+});
+
+
 //coloque seu dataLayer aqui acima
 
 (function($) {
