@@ -180,6 +180,35 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.querySelector("#modal-formulario");
+
+  function trackModalView(modalId) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "modal_view",
+      modal_id: modalId,
+      modal_name: "Formulario Enviado"
+    });
+
+    console.log("[MODAL] Exibição → modal_view:", modalId);
+  }
+
+  // Função que abre o modal
+  function abrirModal() {
+    modal.style.display = "flex";
+    trackModalView("modal-formulario");
+  }
+
+  // Exemplo: abrir ao clicar no botão do formulário
+  const botaoEnviar = document.querySelector('input[type="submit"]');
+  if (botaoEnviar) {
+    botaoEnviar.addEventListener("click", function (event) {
+      event.preventDefault();
+      abrirModal();
+    });
+  }
+});
 
 
 //coloque seu dataLayer aqui acima
