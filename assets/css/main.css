@@ -3380,7 +3380,7 @@ input, select, textarea {
 			}
 
 			botoes-intro {
-				
+				justify-content: center;
 			}
 
 			#wrapper > section:last-of-type > header:after {
