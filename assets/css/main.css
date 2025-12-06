@@ -3375,6 +3375,10 @@ input, select, textarea {
 				height: 100%;
 			}
 
+			cachorro-gato {
+				display: flex;
+			}
+
 			#wrapper > section:last-of-type > header:after {
 				background: #43d9b8;
 				border-radius: 0.5rem;
