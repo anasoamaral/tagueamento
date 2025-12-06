@@ -1974,7 +1974,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #93ffe7;
+				background-color: #f57ca3;
 			}
 
 			input[type="submit"].primary:active,
