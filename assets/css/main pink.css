@@ -3364,9 +3364,19 @@ input, select, textarea {
 					}
 
 				#wrapper > section.intro > .content {
-					height: 100vh;
+					height: 10vh;
 					max-width: none;
 				}
+
+				.cachorro-gato {
+				display: flex;
+			}
+
+			.botoes-intro {
+				justify-content: center;
+				align-items: center;
+			}
+
 
 			#wrapper > section:last-of-type > header:before {
 				height: 100%;
