@@ -3381,6 +3381,7 @@ input, select, textarea {
 
 			botoes-intro {
 				justify-content: center;
+				align-items: center;
 			}
 
 			#wrapper > section:last-of-type > header:after {
