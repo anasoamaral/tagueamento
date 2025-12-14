@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       botaoCachorro.addEventListener("click", function () {
         dataLayer.push({
           event: "button_click",
-          element-id: "cachorro",
+          element_id: "cachorro",
           page_path: window.location.pathname
         });
       });
