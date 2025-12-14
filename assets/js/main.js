@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       botaoGato.addEventListener("click", function () {
         dataLayer.push({
           event: "button_click",
-          cta_name: "gato",
+          element_id: "gato",
           page_path: window.location.pathname
         });
       });
