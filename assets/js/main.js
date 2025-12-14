@@ -128,10 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
           page_path: window.location.pathname
         });
 
-        // aqui você pode:
-        // - abrir modal
-        // - enviar para backend
-        // - ou liberar o submit depois, se quiser
       });
     }
 
