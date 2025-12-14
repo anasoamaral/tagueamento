@@ -6,9 +6,9 @@
 //coloque seu dataLayer aqui abaixo
 
 
-//evento de page_view
+//inicializa dataLayer se não existir
 window.dataLayer = window.dataLayer || [];
-
+//evento de page_view
 document.addEventListener("DOMContentLoaded", () => {
   dataLayer.push({
     event: "page_view",
