@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (botaoCachorro) {
       botaoCachorro.addEventListener("click", function () {
         dataLayer.push({
-          event: "cta_click",
+          event: "button_click",
           cta_name: "cachorro",
           page_path: window.location.pathname
         });
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (botaoGato) {
       botaoGato.addEventListener("click", function () {
         dataLayer.push({
-          event: "cta_click",
+          event: "button_click",
           cta_name: "gato",
           page_path: window.location.pathname
         });
