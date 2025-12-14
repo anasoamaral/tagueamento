@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dataLayer.push({
           event: "button_click",
           element_id: "cachorro",
-          page_path: window.location.pathname
+          element_name: "cachorro"
         });
       });
     }
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dataLayer.push({
           event: "button_click",
           element_id: "gato",
-          page_path: window.location.pathname
+          element_name: "gato"
         });
       });
     }
