@@ -106,31 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-//evento de envio do modal com assunto
-  document.addEventListener("DOMContentLoaded", function () {
-
-    const form = document.querySelector("form");
-
-    if (form) {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // impede reload da página
-
-        const assuntoSelecionado =
-          document.getElementById("assunto")?.value || "nao_informado";
-
-        dataLayer.push({
-          event: "form_submit",
-          form_name: "contato_martech",
-          form_subject: assuntoSelecionado,
-          page_path: window.location.pathname
-        });
-console.log("Formulário enviado com assunto:", assuntoSelecionado);
-      });
-    }
-
-  });
-
 //evento de clique nas redes sociais do footer
 document.addEventListener("DOMContentLoaded", function () {
   // Seleciona todos os links de redes sociais no footer
