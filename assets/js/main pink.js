@@ -4,18 +4,47 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 //coloque seu dataLayer aqui abaixo
-
+//inicializa dataLayer se não existir
 window.dataLayer = window.dataLayer || [];
-
+//evento de page_view
 document.addEventListener("DOMContentLoaded", () => {
   dataLayer.push({
     event: "page_view",
     page_location: window.location.href,
-    page_path: "/martech/gato",
+    page_path: "/martech/cachorro",
     page_title: document.title
   });
 });
 
+//eventos gato e cachorro
+ document.addEventListener("DOMContentLoaded", function () {
+
+    const botaoCachorro = document.getElementById("botao-cachorro");
+    const botaoGato = document.getElementById("botao-gato");
+
+    if (botaoCachorro) {
+      botaoCachorro.addEventListener("click", function () {
+        dataLayer.push({
+          event: "button_click",
+          element_id: "cachorro",
+          element_name: "cachorro"
+        });
+      });
+    }
+
+    if (botaoGato) {
+      botaoGato.addEventListener("click", function () {
+        dataLayer.push({
+          event: "button_click",
+          element_id: "gato",
+          element_name: "gato"
+        });
+      });
+    }
+
+  });
+
+  //evento de visibilidade do elemento
 document.addEventListener("DOMContentLoaded", function () {
       const elemento = document.querySelector("#imagem-visivel");
       if (!elemento) {
@@ -30,8 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Elemento visível! Disparando dataLayer...");
             dataLayer.push({
               event: "element_visible",
-              element_id: "gato-feliz",
-              element_name: "Gatinho feliz"
+              element_id: "cachorro-feliz",
+              element_name: "Cachorrinho feliz"
             });
         // observer.disconnect();
           }
@@ -43,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(elemento);
     });
 
+//evento de clique nos botões ctas
 document.addEventListener("DOMContentLoaded", () => {
   const botao = document.querySelector("#veja-mais");
 
@@ -76,49 +106,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
 
-  const campos = document.querySelectorAll("form input, form textarea");
+//evento de envio do modal com assunto
+  document.addEventListener("DOMContentLoaded", function () {
 
-  campos.forEach(campo => {
-    campo.addEventListener("change", () => {
-      dataLayer.push({
-        event: "form_field_change",
-        field_id: campo.id || null,
-        field_name: campo.name || null,
-        field_value: campo.value || null
+    const form = document.querySelector("form");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // impede reload da página
+
+        const assuntoSelecionado =
+          document.getElementById("assunto")?.value || "nao_informado";
+
+        dataLayer.push({
+          event: "form_submit",
+          form_name: "contato_martech",
+          form_assunto: assuntoSelecionado,
+          page_path: window.location.pathname
+        });
+console.log("Formulário enviado com assunto:", assuntoSelecionado);
       });
+    }
 
-      console.log("[FORM] change →", campo.id, campo.value);
-    });
   });
 
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const form = document.querySelector("form");
-
-  if (!form) return;
-
-  form.addEventListener("submit", (event) => {
-
-    dataLayer.push({
-      event: "form_submitted",
-      form_id: "contato",
-      form_name: "Fale Conosco",
-      name: form.querySelector("#name")?.value || null,
-      email: form.querySelector("#email")?.value || null,
-      message: form.querySelector("#message")?.value || null
-    });
-
-    console.log("[FORM] submitted");
-    
-  });
-
-});
-
-
+//evento de clique nas redes sociais do footer
 document.addEventListener("DOMContentLoaded", function () {
   // Seleciona todos os links de redes sociais no footer
   const socialLinks = document.querySelectorAll("ul.icons a");
@@ -150,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//evento de abertura do modal ao clicar no botão enviar
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const botaoEnviar = document.querySelector('input[type="submit"]');
@@ -209,7 +223,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
 
 
 //coloque seu dataLayer aqui acima
