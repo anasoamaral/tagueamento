@@ -16,6 +16,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+ document.addEventListener("DOMContentLoaded", function () {
+
+    const botaoCachorro = document.getElementById("botao-cachorro");
+    const botaoGato = document.getElementById("botao-gato");
+
+    if (botaoCachorro) {
+      botaoCachorro.addEventListener("click", function () {
+        dataLayer.push({
+          event: "cta_click",
+          cta_name: "cachorro",
+          page_path: window.location.pathname
+        });
+      });
+    }
+
+    if (botaoGato) {
+      botaoGato.addEventListener("click", function () {
+        dataLayer.push({
+          event: "cta_click",
+          cta_name: "gato",
+          page_path: window.location.pathname
+        });
+      });
+    }
+
+  });
+
 document.addEventListener("DOMContentLoaded", function () {
       const elemento = document.querySelector("#imagem-visivel");
       if (!elemento) {
