@@ -181,9 +181,11 @@ document.addEventListener("DOMContentLoaded", () => {
           document.getElementById("assunto")?.value || "nao_informado";
 
     dataLayer.push({
-      event: "form_submit_click",
-      form_id: "contato"
-    });
+          event: "form_submit",
+          form_name: "contato_martech",
+          form_subject: assuntoSelecionado,
+          page_path: window.location.pathname
+        });
 
     modal.style.display = "flex"; // mostra modal
   });
