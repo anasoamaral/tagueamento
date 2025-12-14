@@ -119,11 +119,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   socialLinks.forEach(function (link) {
     link.addEventListener("click", function () {
-      // Pega o nome da rede pelo span.label (Twitter, Instagram, etc.)
+     
       const labelEl = link.querySelector(".label");
       const socialNetwork = labelEl ? labelEl.textContent.trim() : null;
 
-      // URL real do link
       const href = link.getAttribute("href");
 
       console.log("[SOCIAL] Clique em rede social:", socialNetwork, href);
