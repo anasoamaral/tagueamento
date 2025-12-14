@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
+  //evento de visibilidade do elemento
 document.addEventListener("DOMContentLoaded", function () {
       const elemento = document.querySelector("#imagem-visivel");
       if (!elemento) {
