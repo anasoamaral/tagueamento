@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
           form_assunto: assuntoSelecionado,
           page_path: window.location.pathname
         });
-
+console.log("Formulário enviado com assunto:", assuntoSelecionado);
       });
     }
 
