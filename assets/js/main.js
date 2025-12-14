@@ -5,6 +5,8 @@
 */
 //coloque seu dataLayer aqui abaixo
 
+
+//evento de page_view
 window.dataLayer = window.dataLayer || [];
 
 document.addEventListener("DOMContentLoaded", () => {
