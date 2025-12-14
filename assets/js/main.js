@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+//eventos gato e cachorro
  document.addEventListener("DOMContentLoaded", function () {
 
     const botaoCachorro = document.getElementById("botao-cachorro");
