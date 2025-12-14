@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(elemento);
     });
 
+//evento de clique nos botões ctas
 document.addEventListener("DOMContentLoaded", () => {
   const botao = document.querySelector("#veja-mais");
 
