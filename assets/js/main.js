@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+//evento
 document.addEventListener("DOMContentLoaded", () => {
 
   const campos = document.querySelectorAll("form input, form textarea");
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
+//evento de envio do modal com assunto
   document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.querySelector("form");
