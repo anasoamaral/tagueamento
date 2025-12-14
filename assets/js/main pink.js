@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 //coloque seu dataLayer aqui abaixo
+
 //inicializa dataLayer se não existir
 window.dataLayer = window.dataLayer || [];
 //evento de page_view
