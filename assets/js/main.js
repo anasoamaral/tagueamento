@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-
+//evento de clique nas redes sociais do footer
 document.addEventListener("DOMContentLoaded", function () {
   // Seleciona todos os links de redes sociais no footer
   const socialLinks = document.querySelectorAll("ul.icons a");
