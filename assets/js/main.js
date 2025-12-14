@@ -165,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//evento de abertura do modal ao clicar no botão enviar
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const botaoEnviar = document.querySelector('input[type="submit"]');
