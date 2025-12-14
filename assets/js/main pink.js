@@ -5,6 +5,7 @@
 */
 //coloque seu dataLayer aqui abaixo
 
+
 //inicializa dataLayer se não existir
 window.dataLayer = window.dataLayer || [];
 //evento de page_view
@@ -119,11 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   socialLinks.forEach(function (link) {
     link.addEventListener("click", function () {
-      // Pega o nome da rede pelo span.label (Twitter, Instagram, etc.)
+     
       const labelEl = link.querySelector(".label");
       const socialNetwork = labelEl ? labelEl.textContent.trim() : null;
 
-      // URL real do link
       const href = link.getAttribute("href");
 
       console.log("[SOCIAL] Clique em rede social:", socialNetwork, href);
@@ -131,9 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: "social_click",
-        social_network: socialNetwork,   // ex: "Twitter"
-        social_href: href,               // ex: "https://twitter.com/... "
-        social_id: link.id || null       // se quiser dar IDs específicos depois
+        social_network: socialNetwork,   
+        social_href: href,              
       });
     });
   });
@@ -205,7 +204,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
 
 //coloque seu dataLayer aqui acima
 
