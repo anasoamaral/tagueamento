@@ -131,9 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: "social_click",
-        social_network: socialNetwork,   // ex: "Twitter"
-        social_href: href,               // ex: "https://twitter.com/... "
-        social_id: link.id || null       // se quiser dar IDs específicos depois
+        social_network: socialNetwork,   
+        social_href: href,              
       });
     });
   });
