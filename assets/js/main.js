@@ -5,7 +5,6 @@
 */
 //coloque seu dataLayer aqui abaixo
 
-
 //inicializa dataLayer se não existir
 window.dataLayer = window.dataLayer || [];
 //evento de page_view
@@ -108,31 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-//evento de envio do modal com assunto
-  document.addEventListener("DOMContentLoaded", function () {
-
-    const form = document.querySelector("form");
-
-    if (form) {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // impede reload da página
-
-        const assuntoSelecionado =
-          document.getElementById("assunto")?.value || "nao_informado";
-
-        dataLayer.push({
-          event: "form_submit",
-          form_name: "contato_martech",
-          form_subject: assuntoSelecionado,
-          page_path: window.location.pathname
-        });
-console.log("Formulário enviado com assunto:", assuntoSelecionado);
-      });
-    }
-
-  });
-
 //evento de clique nas redes sociais do footer
 document.addEventListener("DOMContentLoaded", function () {
   // Seleciona todos os links de redes sociais no footer
@@ -178,10 +152,16 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault(); // impede o envio imediato
 
     // Se quiser taguear aqui:
+
+	const assuntoSelecionado =
+          document.getElementById("assunto")?.value || "nao_informado";
+
     dataLayer.push({
-      event: "form_submit_click",
-      form_id: "contato"
-    });
+          event: "form_submit",
+          form_name: "contato_martech",
+          form_subject: assuntoSelecionado,
+          page_path: window.location.pathname
+        });
 
     modal.style.display = "flex"; // mostra modal
   });
