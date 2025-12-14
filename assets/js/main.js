@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dataLayer.push({
           event: "form_submit",
           form_name: "contato_martech",
-          form_assunto: assuntoSelecionado,
+          form_subject: assuntoSelecionado,
           page_path: window.location.pathname
         });
 console.log("Formulário enviado com assunto:", assuntoSelecionado);
