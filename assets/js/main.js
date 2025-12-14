@@ -123,28 +123,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-document.addEventListener("DOMContentLoaded", () => {
 
-  const form = document.querySelector("form");
+  document.addEventListener("DOMContentLoaded", function () {
 
-  if (!form) return;
+    const form = document.querySelector("form");
 
-  form.addEventListener("submit", (event) => {
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // impede reload da página
 
-    dataLayer.push({
-      event: "form_submitted",
-      form_id: "contato",
-      form_name: "Fale Conosco",
-      name: form.querySelector("#name")?.value || null,
-      email: form.querySelector("#email")?.value || null,
-      message: form.querySelector("#message")?.value || null
-    });
+        const assuntoSelecionado =
+          document.getElementById("assunto")?.value || "nao_informado";
 
-    console.log("[FORM] submitted");
-    
+        dataLayer.push({
+          event: "form_submit",
+          form_name: "contato_martech",
+          form_assunto: assuntoSelecionado,
+          page_path: window.location.pathname
+        });
+
+        // aqui você pode:
+        // - abrir modal
+        // - enviar para backend
+        // - ou liberar o submit depois, se quiser
+      });
+    }
+
   });
-
-});
 
 
 document.addEventListener("DOMContentLoaded", function () {
