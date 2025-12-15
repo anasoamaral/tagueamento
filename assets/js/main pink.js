@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   dataLayer.push({
     event: "page_view",
     page_location: window.location.href,
-    page_path: "/martech/cachorro",
+    page_path: "/martech/gato",
     page_title: document.title
   });
 });
