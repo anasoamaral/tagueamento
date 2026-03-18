@@ -144,7 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const botaoEnviar = document.querySelector('input[type="submit"]');
   const modal = document.querySelector("#modal-formulario");
   const fechar = document.querySelector("#fechar-modal");
-  const id_usuario = document.querySelector("input[type='email']").value
 
   if (!form || !botaoEnviar || !modal) return;
 
@@ -155,6 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const assuntoSelecionado =
           document.getElementById("assunto")?.value || "nao_informado";
+
+		    const id_usuario = document.querySelector("input[type='email']").value
+
 
     dataLayer.push({
           event: "form_submit",
