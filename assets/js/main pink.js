@@ -154,7 +154,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const assuntoSelecionado = document.getElementById("assunto")?.value || "nao_informado";
 
+	
+
 	const id_usuario = document.querySelector("input[type='email']").value
+
+	const getSHA256Hash = async (input) => {
+  const textAsBuffer = new TextEncoder().encode(input);
+  const hashBuffer = await window.crypto.subtle.digest("SHA-256", textAsBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hash = hashArray
+    .map((item) => item.toString(16).padStart(2, "0"))
+    .join("");
+  return hash;
+};
+
+const hash = getSHA256Hash(id_usuario).then(hash => console.log(hash));
 
 
     dataLayer.push({
@@ -162,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
           form_name: "contato_martech",
           form_subject: assuntoSelecionado,
           page_path: window.location.pathname,
-		  id_usuario: id_usuario
+		  hash: id_usuario
         });
 
     modal.style.display = "flex"; // mostra modal
