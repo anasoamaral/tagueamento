@@ -4,7 +4,15 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 //coloque seu dataLayer aqui abaixo
-
+	const getSHA256Hash = async (input) => {
+  const textAsBuffer = new TextEncoder().encode(input);
+  const hashBuffer = await window.crypto.subtle.digest("SHA-256", textAsBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hash = hashArray
+    .map((item) => item.toString(16).padStart(2, "0"))
+    .join("");
+  return hash;
+};
 
 //inicializa dataLayer se não existir
 window.dataLayer = window.dataLayer || [];
@@ -158,15 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const id_usuario = document.querySelector("input[type='email']").value
 
-	const getSHA256Hash = async (input) => {
-  const textAsBuffer = new TextEncoder().encode(input);
-  const hashBuffer = await window.crypto.subtle.digest("SHA-256", textAsBuffer);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  const hash = hashArray
-    .map((item) => item.toString(16).padStart(2, "0"))
-    .join("");
-  return hash;
-};
+
 
 const hash = getSHA256Hash(id_usuario).then(hash => console.log("olha ai: "+ hash));
 
