@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form || !botaoEnviar || !modal) return;
 
-  botaoEnviar.addEventListener("click", function (event) {
+  botaoEnviar.addEventListener("click", async function (event) {
     event.preventDefault(); // impede o envio imediato
 
     // Se quiser taguear aqui:
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const id_usuario = document.querySelector("input[type='email']").value
 
 
-const hash = getSHA256Hash(id_usuario);
+const hash = await getSHA256Hash(id_usuario);
 	
 console.log("olha ai: "+ hash);
 
