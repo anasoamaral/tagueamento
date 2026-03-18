@@ -165,7 +165,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	const id_usuario = document.querySelector("input[type='email']").value
 
 
-const hash = getSHA256Hash(id_usuario).then(hash => console.log("olha ai: "+ hash));
+const hash = getSHA256Hash(id_usuario);
+	
+console.log("olha ai: "+ hash);
 
 
     dataLayer.push({
