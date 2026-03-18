@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
   return hash;
 };
 
-const hash = getSHA256Hash(id_usuario).then(hash => console.log(hash));
+const hash = getSHA256Hash(id_usuario).then(hash => console.log("olha ai: "+ hash));
 
 
     dataLayer.push({
