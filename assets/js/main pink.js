@@ -176,7 +176,7 @@ const hash = getSHA256Hash(id_usuario).then(hash => console.log("olha ai: "+ has
           form_name: "contato_martech",
           form_subject: assuntoSelecionado,
           page_path: window.location.pathname,
-		  hash: id_usuario
+		  hash: hash
         });
 
     modal.style.display = "flex"; // mostra modal
