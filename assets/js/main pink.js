@@ -152,10 +152,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Se quiser taguear aqui:
 
-	const assuntoSelecionado =
-          document.getElementById("assunto")?.value || "nao_informado";
+	const assuntoSelecionado = document.getElementById("assunto")?.value || "nao_informado";
 
-		    const id_usuario = document.querySelector("input[type='email']").value
+	const id_usuario = document.querySelector("input[type='email']").value
 
 
     dataLayer.push({
