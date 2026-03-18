@@ -144,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const botaoEnviar = document.querySelector('input[type="submit"]');
   const modal = document.querySelector("#modal-formulario");
   const fechar = document.querySelector("#fechar-modal");
+  const id_usuario = document.getElementById("email")?.value || "nao_informado";
 
   if (!form || !botaoEnviar || !modal) return;
 
@@ -159,7 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
           event: "form_submit",
           form_name: "contato_martech",
           form_subject: assuntoSelecionado,
-          page_path: window.location.pathname
+          page_path: window.location.pathname,
+		  id_usuario: id_usuario
         });
 
     modal.style.display = "flex"; // mostra modal
