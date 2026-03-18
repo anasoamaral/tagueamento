@@ -162,10 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const assuntoSelecionado = document.getElementById("assunto")?.value || "nao_informado";
 
-	
-
 	const id_usuario = document.querySelector("input[type='email']").value
-
 
 
 const hash = getSHA256Hash(id_usuario).then(hash => console.log("olha ai: "+ hash));
